@@ -1,23 +1,40 @@
-import React, {useState}from 'react'
-import Table from '../Table'
-import { Button } from 'bootstrap'
-import App from '../App'
-// import Boxes from '../Components/Boxes'
+import React, { useState } from 'react';
+import StudentForm from '../Components/StudentForm';
+import StudentTable from '../StudentTable';
 
 const Landingpage = () => {
+  const [students, setStudents] = useState([]);
+  const [activeTab, setActiveTab] = useState('students');
 
-    
-  const [name , setName] = useState("Abu")
-  const [names , setNames] = useState("Anu")
-  const [namess, setNamess] = useState("Kayode")
-  
+  const addStudent = (student) => {
+    setStudents([...students, student]);
+  };
+
   return (
-    <div>
-      <button onClick={'students'}/>
-      <button onClick={'students'}/>
-      
+    <div className="school-portal">
+      <header>
+        <h1>SchoolPortal</h1>
+        <nav>
+          <span 
+            className={activeTab === 'students' ? 'active' : ''}
+            onClick={() => setActiveTab('students')}
+          >
+            Students
+          </span>
+          <span 
+            className={activeTab === 'add' ? 'active' : ''}
+            onClick={() => setActiveTab('add')}
+          >
+            Add Students
+          </span>
+        </nav>
+      </header>
+      <main>
+        {activeTab === 'students' && <StudentTable students={students} />}
+        {activeTab === 'add' && <StudentForm onAddStudent={addStudent} />}
+      </main>
     </div>
-  )
-}
+  );
+};
 
-export default Landingpage
+export default Landingpage;

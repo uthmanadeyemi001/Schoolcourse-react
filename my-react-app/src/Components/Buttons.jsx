@@ -9,3 +9,4 @@ const Buttons = ({student,background:color}) => {
 }
 
 export default Buttons
+
