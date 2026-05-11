@@ -12,7 +12,7 @@ const StudentForm = ({ onAddStudent }) => {
     e.preventDefault();
     if (firstName && lastName && cgpa && studentId && level && department) {
       const newStudent = {
-        id: Date.now(), // simple unique id
+        id: Date.now(),
         firstName,
         lastName,
         cgpa: parseFloat(cgpa),

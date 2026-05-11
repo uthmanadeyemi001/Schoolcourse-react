@@ -1,9 +1,14 @@
 import React from 'react'
 
-const Buttons = ({student,background:color}) => {
+const Buttons = ({ student, background }) => {
   return (
     <div>
-      <button onClick={student} background:color={purple}></button>
+      <button
+        onClick={student}
+        style={{ backgroundColor: background || 'purple' }}
+      >
+        Click
+      </button>
     </div>
   )
 }

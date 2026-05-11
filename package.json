@@ -1,4 +1,12 @@
 {
+  "name": "school-course-react",
+  "private": true,
+  "scripts": {
+    "dev": "cd my-react-app && npm run dev",
+    "build": "cd my-react-app && npm run build",
+    "lint": "cd my-react-app && npm run lint",
+    "preview": "cd my-react-app && npm run preview"
+  },
   "dependencies": {
     "bootstrap": "^5.3.8",
     "react-bootstrap": "^2.10.10"

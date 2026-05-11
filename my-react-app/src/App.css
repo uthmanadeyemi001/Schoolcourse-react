@@ -95,6 +95,40 @@ button[type="submit"]:hover {
   background-color: #45a049;
 }
 
+.button-wrapper {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.styled-button {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 16px 30px rgba(124, 58, 237, 0.22);
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+  background: linear-gradient(135deg, #7c3aed 0%, #9333ea 100%);
+}
+
+.styled-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.24);
+}
+
+.styled-button:active {
+  transform: translateY(0);
+  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.18);
+}
+
+.styled-button:focus-visible {
+  outline: 3px solid rgba(124, 58, 237, 0.35);
+  outline-offset: 3px;
+}
+
 .student-table {
   background-color: #f9f9f9;
   padding: 20px;
